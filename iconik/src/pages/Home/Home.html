@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name</title>
+    <title>Iconik</title>
     <!-- loading placeholder's styles -->
     <%= require('html-loader!../../components/loadingPlaceholder/loadingPlaceholderStyles.html').default %>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- favicon and meta data -->
+    <%= require('html-loader!../../sections/Favicon/Favicon.html').default %>
+
 </head>
 
 <body>
@@ -16,7 +23,6 @@
     <!-- website content -->
     <%= require('html-loader!../../sections/Header/Header.html').default %>
     <main class="main">
-        <%= require('html-loader!./homeSections/Intro/Intro.html').default %>
     </main>
     <%= require('html-loader!../../sections/Footer/Footer.html').default %>
 </body>

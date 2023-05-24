@@ -1,0 +1,263 @@
+@use '../../styles/vars';
+
+.header {
+    background-color: rgba(vars.$black, 0.95);
+    border-bottom: 1px solid vars.$gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+/* logotype */
+.header__logo {
+    width: 150px;
+    margin-right: 20px;
+
+    svg {
+        transition: vars.$transition;
+    }
+
+    &:hover,
+    &:focus {
+        svg {
+            fill: vars.$white;
+        }
+    }
+}
+
+/* navigation <nav> */
+.header__nav {
+    width: calc(100% + 40px);
+    height: 100vh;
+    padding: 40px 0;
+    background-color: rgba(vars.$black, 0.95);
+    text-align: center;
+    opacity: 0;
+    transition: vars.$transition;
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: -20px;
+    z-index: 1;
+}
+
+/* navigation list <ul> */
+.header__links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* list item <li> */
+.header__list-item {
+    font-size: 20px;
+    transform: translate3d(400px, 0, 0);
+    transition: vars.$transition;
+}
+
+/* links */
+.header__link {
+    font-size: 20px;
+    font-weight: 600;
+    transition: vars.$transition;
+    transition-property: color, transform;
+
+    &:hover,
+    &:focus {
+        color: vars.$purple;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+/* dropdown menu */
+.header__dropdown {
+    border: none;
+    font-size: 20px;
+    text-align: left;
+    transform: translate3d(400px, 0, 0);
+
+    .dropdown__item a {
+        &:hover,
+        &:focus {
+            color: vars.$purple;
+        }
+    }
+}
+
+/* wrapper for the burger button (left border) */
+.header__btn-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+    border-left: 1px solid vars.$gray;
+}
+
+/* burger button */
+.header__nav-btn {
+    display: block;
+    width: 40px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    transition: vars.$transition;
+    cursor: pointer;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        span {
+            background-color: vars.$purple;
+        }
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+
+    /* burger lines */
+    span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: vars.$white;
+        border-radius: 4px;
+        transition: vars.$transition;
+        position: absolute;
+        left: 0;
+
+        &:nth-of-type(1) {
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            top: 15px;
+        }
+
+        &:nth-of-type(3) {
+            bottom: 0;
+        }
+    }
+}
+
+/* active navigation */
+/* navigation <nav> */
+.header__nav--active {
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+
+    .header__list-item,
+    .header__dropdown {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* burger button */
+.header__nav-btn--active {
+    span:nth-of-type(1) {
+        transform: translateY(16px) rotate(-45deg);
+    }
+
+    span:nth-of-type(2) {
+        opacity: 0;
+        transform: translate3d(200%, 0, 0);
+    }
+
+    span:nth-of-type(3) {
+        transform: translateY(-14.5px) rotate(45deg);
+    }
+}
+
+/* SCREEN ADAPTATION */
+/* tablet */
+@media (min-width: vars.$screen-sm) {
+    /* logotype */
+    .header__logo {
+        width: 200px;
+    }
+}
+
+/* desktop */
+@media (min-width: vars.$screen-lg) {
+    .header__inner {
+        height: auto;
+    }
+
+    /* logotype */
+    .header__logo {
+        width: 220px;
+    }
+
+    /* navigation <nav> */
+    .header__nav {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+        transition: vars.$transition;
+        visibility: visible;
+        overflow: visible;
+        position: static;
+    }
+
+    /* navigation list <ul> */
+    .header__links-list {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        margin-bottom: 0;
+        padding: 10px 20px 10px 0;
+        border-right: 1px solid vars.$gray;
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* list item <li> */
+    .header__list-item {
+        font-size: 14px;
+        transform: none;
+
+        /* "Get a consultation" link */
+        .btn {
+            margin-left: 20px;
+        }
+    }
+
+    /* links */
+    .header__link {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    /* dropdown menu */
+    .header__dropdown {
+        font-size: 14px;
+        transform: none;
+    }
+
+    /* burger button */
+    .header__nav-btn {
+        display: none;
+    }
+}

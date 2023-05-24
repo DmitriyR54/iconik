@@ -1,0 +1,29 @@
+@use '../styles/vars';
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: vars.$transition;
+    transition-property: color, background-color, border-color, transform;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn--primary {
+    border: 2px solid transparent;
+    background-color: vars.$purple;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border-color: vars.$purple;
+    }
+}
+
+.btn--rad {
+    border-radius: 4px;
+}
