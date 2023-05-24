@@ -1,7 +1,8 @@
-/* fonts */
-@use '../fonts/fonts.scss';
+/* typography */
+@use '../fonts/fonts';
+@use './typography';
 /* variables */
-@use './_vars.scss';
+@use './_vars';
 /* components */
 @use '../components/button';
 @use '../components/dropdown';

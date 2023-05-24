@@ -9,6 +9,7 @@ import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
 // sections
 import 'Sections/Header/Header';
+import './homeSections/Intro/Intro.scss';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {

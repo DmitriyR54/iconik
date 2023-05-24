@@ -1,0 +1,47 @@
+@use '../styles/vars';
+
+.title {
+    font-family: vars.$alVeshion;
+    font-size: 24px;
+    text-align: center;
+}
+
+.title--main {
+    font-size: 30px;
+    text-align: left;
+}
+
+.title--sm {
+    font-size: 16px;
+}
+
+/* SCREEN ADAPTATION */
+/* tablet */
+@media (min-width: vars.$screen-md) {
+    .title {
+        font-size: 36px;
+    }
+
+    .title--main {
+        font-size: 45px;
+    }
+
+    .title--sm {
+        font-size: 20px;
+    }
+}
+
+/* desktop */
+@media (min-width: vars.$screen-lg) {
+    .title {
+        font-size: 48px;
+    }
+
+    .title--main {
+        font-size: 60px;
+    }
+
+    .title--sm {
+        font-size: 24px;
+    }
+}
