@@ -1,28 +1,52 @@
 // components
 import { splideCarousel, splideInstance } from 'Components/splideCarousel/splideCarousel';
-// components
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 // styles
 import './Services.scss';
 
+// initiate the carousel
 splideCarousel('services__carousel');
 
+// carousel items
 const filterItems = document.querySelectorAll('#services__carousel .splide__slide');
 
-let items = [];
+// filter buttons
+const filterBtn = document.querySelectorAll('[data-services-filter-btn]');
 
-filterItems.forEach((item) => {
-    items.push(item);
-});
+// main filter function
+function servicesFilter(btn) {
+    const btnAttr = btn.getAttribute('data-services-filter-btn');
 
-// console.log(items);
+    splideInstance.remove('.splide__slide');
 
-splideInstance.remove('.splide__slide');
+    filterItems.forEach((item) => {
+        item.style.opacity = 0;
 
-setTimeout(() => {
-    items.forEach((item) => {
-        splideInstance.add(item);
-        console.log(item);
+        if (btnAttr === item.getAttribute('data-services-filter-item')) {
+            splideInstance.add(item);
+        } else if (btnAttr === 'all') {
+            splideInstance.add(item);
+        }
+
+        setTimeout(() => {
+            item.style.opacity = 1;
+        }, 50);
+
         lazyLoadImages();
     });
-}, 3000);
+
+    filterBtn.forEach((btn) => {
+        btn.classList.remove('btn--active');
+    });
+
+    // btn.classList.add('btn--active');G
+    btn.blur();
+
+    document.querySelectorAll(`[data-services-filter-btn=${btnAttr}]`).forEach((btn) => btn.classList.add('btn--active'));
+}
+
+filterBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        servicesFilter(btn);
+    });
+});

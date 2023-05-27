@@ -21,9 +21,12 @@
 
 /* active filter option */
 .services__dropdown-current {
-    color: inherit;
+    width: 100%;
+}
+
+.splide__slide {
     transition: vars.$transition;
-    transition-property: color;
+    transition-property: opacity;
 }
 
 /* carousel card */
@@ -58,7 +61,7 @@
         transition-property: filter;
 
         img {
-            height: 300px;
+            height: 330px;
         }
     }
 

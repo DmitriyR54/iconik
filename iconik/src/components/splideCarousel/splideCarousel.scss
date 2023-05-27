@@ -23,6 +23,7 @@
         background-color: transparent;
         border: none;
         border-radius: 50%;
+        opacity: 0.75;
         transition: vars.$transition;
         cursor: pointer;
         pointer-events: all;
@@ -30,7 +31,7 @@
         svg {
             display: block;
             fill: vars.$white;
-            stroke: vars.$white;
+            stroke: vars.$black;
             transition: vars.$transition;
 
             path:nth-child(2),
@@ -42,9 +43,11 @@
 
         &:hover,
         &:focus {
+            opacity: 1;
+
             svg {
                 fill: vars.$white;
-                stroke: vars.$black;
+                stroke: vars.$white;
 
                 path:nth-child(2),
                 path:nth-child(3) {
@@ -59,6 +62,3 @@
         }
     }
 }
-
-/* SCREEN ADAPTATION */
-/* mobile phones */

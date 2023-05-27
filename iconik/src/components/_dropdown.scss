@@ -1,7 +1,6 @@
 @use '../styles/vars';
 
 .dropdown-wrapper {
-    padding-right: 20px;
     background-color: transparent;
     cursor: pointer;
     transition: vars.$transition;
@@ -30,7 +29,7 @@
         transition: vars.$transition;
         position: absolute;
         top: 50%;
-        right: 0;
+        right: -20px;
         z-index: 1;
     }
 }
@@ -49,6 +48,7 @@
 }
 
 .dropdown__item > * {
+    width: 100%;
     display: block;
     transition: vars.$transition;
 }
