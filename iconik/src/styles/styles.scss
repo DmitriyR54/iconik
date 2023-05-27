@@ -33,6 +33,10 @@ body {
     background-color: vars.$black;
 }
 
+section {
+    padding-top: 60px;
+}
+
 /* main size container */
 .container {
     max-width: 1240px;
@@ -42,10 +46,16 @@ body {
 
 /* SCREEN ADAPTATION */
 @media (min-width: vars.$screen-lg) {
+    section {
+        padding-top: 180px;
+    }
 }
 
 /* tablets */
 @media (min-width: vars.$screen-md) {
+    section {
+        padding-top: 90px;
+    }
 }
 
 /* mobile phones */

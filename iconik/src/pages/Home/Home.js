@@ -10,6 +10,7 @@ import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadin
 // sections
 import 'Sections/Header/Header';
 import './homeSections/Intro/Intro.scss';
+import './homeSections/Services/Services';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {

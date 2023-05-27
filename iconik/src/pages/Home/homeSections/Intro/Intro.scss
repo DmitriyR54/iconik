@@ -7,11 +7,13 @@
     background-size: cover;
     background-position: center;
 
+    /* title */
     .title--main {
         margin-bottom: 30px;
     }
 }
 
+/* play button */
 .intro__play {
     display: flex;
     align-items: center;
@@ -45,6 +47,15 @@
     }
 }
 
-.intro__play-text{
+.intro__play-text {
     font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* SCREEN ADAPTATION */
+/* desktop */
+@media (min-width: vars.$screen-lg) {
+    .intro__play-text {
+        font-size: 20px;
+    }
 }

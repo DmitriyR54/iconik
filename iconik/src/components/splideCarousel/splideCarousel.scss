@@ -1,0 +1,64 @@
+@use '../../styles/vars';
+
+.splide {
+    padding: 0;
+    position: relative;
+}
+
+/* prev/next buttons wrapper */
+.splide__arrows {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    /* prev/next single button */
+    .splide__arrow {
+        width: 50px;
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        transition: vars.$transition;
+        cursor: pointer;
+        pointer-events: all;
+
+        svg {
+            display: block;
+            fill: vars.$white;
+            stroke: vars.$white;
+            transition: vars.$transition;
+
+            path:nth-child(2),
+            path:nth-child(3) {
+                stroke: vars.$black;
+                transition: vars.$transition;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            svg {
+                fill: vars.$white;
+                stroke: vars.$black;
+
+                path:nth-child(2),
+                path:nth-child(3) {
+                    stroke: vars.$purple;
+                }
+            }
+        }
+
+        &:disabled {
+            opacity: 0;
+            cursor: default;
+        }
+    }
+}
+
+/* SCREEN ADAPTATION */
+/* mobile phones */

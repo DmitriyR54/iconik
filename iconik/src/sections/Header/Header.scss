@@ -1,7 +1,7 @@
 @use '../../styles/vars';
 
 .header {
-    background-color: rgba(vars.$black, 0.95);
+    background-color: rgba(vars.$black, 0.99);
     border-bottom: 1px solid vars.$gray;
     position: fixed;
     top: 0;
@@ -40,7 +40,7 @@
     width: calc(100% + 40px);
     height: 100vh;
     padding: 40px 0;
-    background-color: rgba(vars.$black, 0.95);
+    background-color: rgba(vars.$black, 0.99);
     text-align: center;
     opacity: 0;
     transition: vars.$transition;
@@ -65,23 +65,16 @@
     font-size: 20px;
     transform: translate3d(400px, 0, 0);
     transition: vars.$transition;
+
+    /* "Get a consultation" link */
+    .btn {
+        font-size: inherit;
+    }
 }
 
 /* links */
 .header__link {
     font-size: 20px;
-    font-weight: 600;
-    transition: vars.$transition;
-    transition-property: color, transform;
-
-    &:hover,
-    &:focus {
-        color: vars.$purple;
-    }
-
-    &:active {
-        transform: scale(0.9);
-    }
 }
 
 /* dropdown menu */
@@ -89,6 +82,7 @@
     border: none;
     font-size: 20px;
     text-align: left;
+    letter-spacing: 1px;
     transform: translate3d(400px, 0, 0);
 
     .dropdown__item a {
@@ -224,6 +218,7 @@
     /* navigation list <ul> */
     .header__links-list {
         flex-direction: row;
+        justify-content: end;
         align-items: center;
         flex-wrap: wrap;
         row-gap: 20px;

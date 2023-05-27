@@ -1,0 +1,181 @@
+@use '../../../../styles/vars';
+
+.services {
+    // padding-bottom: 500px;
+}
+
+/* desktop filter */
+.services__options {
+    display: none;
+}
+
+/* mobile filter */
+.services__dropdown {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &::after {
+        right: 20px;
+    }
+}
+
+/* active filter option */
+.services__dropdown-current {
+    color: inherit;
+    transition: vars.$transition;
+    transition-property: color;
+}
+
+/* carousel card */
+.services__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* carousel card illustration */
+.services__card-illustration {
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        .lazy-image {
+            filter: brightness(0.5);
+        }
+
+        .btn {
+            transform: translate3d(0, 0, 0);
+            visibility: visible;
+        }
+    }
+
+    /* cover image */
+    .lazy-image {
+        transition: vars.$transition;
+        transition-property: filter;
+
+        img {
+            height: 300px;
+        }
+    }
+
+    /* link */
+    .btn {
+        transform: translate3d(0, 100%, 0);
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
+/* carousel card title */
+.services__card-title {
+    width: fit-content;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+/* carousel card meta data wrapper */
+.services__card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+/* carousel card price */
+.services__card-price {
+    display: flex;
+    align-items: center;
+}
+
+.services__card-new-price {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.services__card-old-price {
+    color: vars.$gray;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+/* carousel card time */
+.services__card-time {
+    display: flex;
+    align-items: center;
+}
+
+.services__card-time-icon {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.services__card-time-text {
+    color: vars.$gray;
+    font-size: 12px;
+}
+
+/* SCREEN ADAPTATION */
+/* tablet */
+@media (min-width: vars.$screen-md) {
+    /* mobile filter */
+    .services__dropdown {
+        display: none;
+    }
+
+    /* desktop filter */
+    .services__options {
+        display: flex;
+        margin-bottom: 60px;
+    }
+
+    /* single filter option */
+    .services__option {
+        flex: 1 0 0;
+
+        .btn {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /* carousel card illustration */
+    .services__card-illustration {
+        /* cover image */
+        .lazy-image {
+            img {
+                height: 350px;
+            }
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: vars.$screen-lg) {
+    /* carousel card price */
+    .services__card-new-price {
+        font-size: 18px;
+    }
+
+    .services__card-old-price {
+        font-size: 14px;
+    }
+
+    /* carousel card time */
+    .services__card-time-text {
+        font-size: 14px;
+    }
+}
