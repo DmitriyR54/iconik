@@ -27,6 +27,7 @@
         width: 12px;
         transform: translateY(-50%);
         transition: vars.$transition;
+        pointer-events: none;
         position: absolute;
         top: 50%;
         right: -20px;

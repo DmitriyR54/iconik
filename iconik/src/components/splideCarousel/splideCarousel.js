@@ -1,17 +1,18 @@
-import Splide from '@splidejs/splide';
 import '@splidejs/splide/dist/css/splide-core.min.css';
 // styles
 import './splideCarousel.scss';
 
-let splideInstance;
-
-const splideCarousel = (carouselId) => {
-    splideInstance = new Splide(`#${carouselId}`, {
-        perPage: 3,
+const splideConfig = (perPage = 3, arrows = true, pagination = false) => {
+    return {
+        perPage,
         gap: '20px',
-        pagination: false,
+        pagination,
+        arrows,
         flickPower: 200,
         breakpoints: {
+            1024: {
+                perPage: 3,
+            },
             768: {
                 perPage: 2,
             },
@@ -19,9 +20,7 @@ const splideCarousel = (carouselId) => {
                 perPage: 1,
             },
         },
-    });
-
-    splideInstance.mount();
+    };
 };
 
-export { splideCarousel, splideInstance };
+export { splideConfig };

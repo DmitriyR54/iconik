@@ -38,8 +38,8 @@
 /* navigation <nav> */
 .header__nav {
     width: calc(100% + 40px);
-    height: 100vh;
-    padding: 40px 0;
+    height: calc(100vh - 60px);
+    padding: 40px 0 80px;
     background-color: rgba(vars.$black, 0.99);
     text-align: center;
     opacity: 0;
