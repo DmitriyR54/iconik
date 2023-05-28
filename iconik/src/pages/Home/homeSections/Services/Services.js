@@ -65,4 +65,4 @@ setTimeout(() => {
             servicesFilter(btn);
         });
     });
-}, 250);
+}, 500);

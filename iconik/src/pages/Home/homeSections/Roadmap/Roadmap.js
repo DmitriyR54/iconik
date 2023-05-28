@@ -12,4 +12,4 @@ setTimeout(() => {
 
     // initiate the carousel
     new Splide('#roadmap__carousel', splideConfig(3, false, true)).mount();
-}, 250);
+}, 500);
