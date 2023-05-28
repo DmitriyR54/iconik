@@ -2,6 +2,9 @@
 
 .roadmap {
     padding-bottom: 60px;
+    opacity: 0;
+    transition: vars.$transition;
+    transition-property: opacity;
 }
 
 /* single roadmap item */

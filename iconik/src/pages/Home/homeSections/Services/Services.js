@@ -6,9 +6,11 @@ import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 // styles
 import './Services.scss';
 
+// setTimeout to impove the PageSpeed performance value
 setTimeout(() => {
+    // show the section
     document.querySelector('.services').style.opacity = 1;
-    
+
     // initiate the carousel
     const splideInstance = new Splide('#services__carousel', splideConfig()).mount();
 
@@ -63,4 +65,4 @@ setTimeout(() => {
             servicesFilter(btn);
         });
     });
-}, 500);
+}, 250);
