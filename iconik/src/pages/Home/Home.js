@@ -14,6 +14,7 @@ import './homeSections/Intro/Intro.scss';
 import './homeSections/Services/Services';
 import './homeSections/Roadmap/Roadmap';
 import './homeSections/Plans/Plans.scss';
+import './homeSections/Lifestyle/Lifestyle';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {

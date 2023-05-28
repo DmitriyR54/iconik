@@ -12,7 +12,7 @@ setTimeout(() => {
     document.querySelector('.services').style.opacity = 1;
 
     // initiate the carousel
-    const splideInstance = new Splide('#services__carousel', splideConfig()).mount();
+    const splideInstance = new Splide('#services__carousel', splideConfig(4)).mount();
 
     // carousel items
     const filterItems = document.querySelectorAll('#services__carousel .splide__slide');

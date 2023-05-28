@@ -26,11 +26,6 @@
     width: 100%;
 }
 
-.splide__slide {
-    transition: vars.$transition;
-    transition-property: opacity;
-}
-
 /* carousel card */
 .services__card {
     display: flex;

@@ -37,6 +37,7 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.7",
-        "@splidejs/splide": "^4.1.4"
+        "@splidejs/splide": "^4.1.4",
+        "photoswipe": "^5.3.7"
     }
 }
