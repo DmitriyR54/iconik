@@ -1,0 +1,18 @@
+/* variants of the appearing */
+.smooth-show--slide {
+    transform: translate3d(0, 200px, 0);
+    opacity: 0;
+
+    &.smooth-show--active {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.smooth-show--opacity {
+    opacity: 0;
+
+    &.smooth-show--active {
+        opacity: 1;
+    }
+}

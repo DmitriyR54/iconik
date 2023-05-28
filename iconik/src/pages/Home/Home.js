@@ -7,11 +7,13 @@ import './Home.scss';
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
+import 'Components/smoothShow/smoothShow';
 // sections
 import 'Sections/Header/Header';
 import './homeSections/Intro/Intro.scss';
 import './homeSections/Services/Services';
 import './homeSections/Roadmap/Roadmap';
+import './homeSections/Plans/Plans.scss';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {

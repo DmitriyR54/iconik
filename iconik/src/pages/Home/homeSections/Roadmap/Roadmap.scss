@@ -10,6 +10,8 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    transition: vars.$transition;
+    transition-property: opacity;
     text-align: center;
 }
 
@@ -34,6 +36,18 @@
 }
 
 /* SCREEN ADAPTATION */
+/* tablets */
+@media (min-width: vars.$screen-md) {
+    .roadmap {
+        padding-bottom: 90px;
+    }
+
+    /* illustration */
+    .roadmap__img {
+        width: 70px;
+    }
+}
+
 /* desktop */
 @media (min-width: vars.$screen-lg) {
     .roadmap {
@@ -48,17 +62,5 @@
     /* name */
     .roadmap__title {
         font-size: 18px;
-    }
-}
-
-/* tablets */
-@media (min-width: vars.$screen-md) {
-    .roadmap {
-        padding-bottom: 90px;
-    }
-
-    /* illustration */
-    .roadmap__img {
-        width: 70px;
     }
 }

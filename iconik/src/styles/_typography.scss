@@ -8,6 +8,8 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
+    transition: vars.$transition;
+    transition-property: color;
 }
 
 .title--main {
@@ -39,6 +41,8 @@
 .paragraph {
     font-size: 14px;
     letter-spacing: 1px;
+    transition: vars.$transition;
+    transition-property: color;
 }
 
 /* SCREEN ADAPTATION */
@@ -51,10 +55,12 @@
     }
 
     .title--main {
+        margin-bottom: 0;
         font-size: 40px;
     }
 
     .title--sm {
+        margin-bottom: 0;
         font-size: 20px;
     }
 }
@@ -68,10 +74,12 @@
     }
 
     .title--main {
+        margin-bottom: 0;
         font-size: 48px;
     }
 
     .title--sm {
+        margin-bottom: 0;
         font-size: 24px;
     }
 
