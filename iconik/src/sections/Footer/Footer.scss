@@ -1,0 +1,140 @@
+@use '../../styles/vars';
+
+.footer {
+    background-color: vars.$dark-gray;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* wrapper for the text info (logo and links) */
+.footer__info {
+    padding: 50px 0;
+
+    .main-logo {
+        margin-bottom: 30px;
+    }
+}
+
+/* wrapper for all the links */
+.footer__info-links {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* footer link */
+.footer__link {
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+/* anchor links */
+.footer__anchors-item {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* contact links */
+.footer__contacts-wrapper {
+    margin-bottom: 30px;
+}
+
+/* contact link wrapper */
+.footer__contact {
+    margin-bottom: 15px;
+
+    .paragraph {
+        margin-bottom: 5px;
+        color: vars.$purple;
+        text-transform: uppercase;
+    }
+}
+
+/* map link */
+.footer__map {
+    min-width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+/* copyright section */
+.copyright {
+    padding: 30px 0;
+}
+
+.copyright__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 15px;
+    text-align: center;
+}
+
+/* SCREEN ADAPTATION */
+/* tablets */
+@media (min-width: vars.$screen-md) {
+    /* wrapper for the text info */
+    .footer__info {
+        width: 50%;
+        padding: 75px 0;
+    }
+
+    /* map link */
+    .footer__map {
+        min-width: 50%;
+        max-width: 50%;
+        margin: 0;
+
+        figure {
+            height: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: vars.$screen-lg) {
+    /* wrapper for the text info */
+    .footer__info {
+        min-width: 50%;
+        padding: 100px 0;
+    }
+
+    /* wrapper for all the links */
+    .footer__info-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+
+    /* footer link */
+    .footer__link {
+        font-size: 16px;
+    }
+
+    /* map link */
+    .footer__map {
+        min-width: 25%;
+        max-width: 50%;
+    }
+
+    /* copyright section */
+    .copyright__inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

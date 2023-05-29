@@ -19,7 +19,8 @@
 }
 
 /* logotype */
-.header__logo {
+.main-logo {
+    display: block;
     width: 150px;
     margin-right: 20px;
 
@@ -182,7 +183,7 @@
 /* tablet */
 @media (min-width: vars.$screen-sm) {
     /* logotype */
-    .header__logo {
+    .main-logo {
         width: 200px;
     }
 }
@@ -194,7 +195,7 @@
     }
 
     /* logotype */
-    .header__logo {
+    .main-logo {
         width: 220px;
     }
 

@@ -7,6 +7,7 @@
     background-color: rgba(vars.$black, 0.75);
     opacity: 0;
     transition: vars.$transition;
+    transition-property: opacity;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     position: fixed;
