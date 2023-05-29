@@ -49,12 +49,6 @@ section {
 }
 
 /* SCREEN ADAPTATION */
-@media (min-width: vars.$screen-lg) {
-    section {
-        padding-top: 180px;
-    }
-}
-
 /* tablets */
 @media (min-width: vars.$screen-md) {
     section {
@@ -62,6 +56,9 @@ section {
     }
 }
 
-/* mobile phones */
-@media (min-width: vars.$screen-sm) {
+/* desktop */
+@media (min-width: vars.$screen-lg) {
+    section {
+        padding-top: 120px;
+    }
 }

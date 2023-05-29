@@ -1,8 +1,6 @@
-// libraries
 // styles
 import 'modern-normalize/modern-normalize.css';
 import 'Src/styles/styles.scss';
-import './Home.scss';
 // components
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 import 'Components/lazyLoadImages/lazyLoadImages.scss';
@@ -15,6 +13,7 @@ import './homeSections/Services/Services';
 import './homeSections/Roadmap/Roadmap';
 import './homeSections/Plans/Plans.scss';
 import './homeSections/Lifestyle/Lifestyle';
+import './homeSections/Contact/Contact.scss';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
